@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Moderation Logs</h1>
+
+    <% logs.forEach(log => { %>
+        <div class="log-card">
+            <h2><%= log.action %></h2>
+
+            <p><strong>Moderator:</strong> <%= log.moderator %></p>
+            <p><strong>Target:</strong> <%= log.target %></p>
+            <p><strong>Reason:</strong> <%= log.reason %></p>
+            <p><strong>Date:</strong> <%= log.created_at %></p>
+        </div>
+    <% }) %>
+</div>
+
+</body>
+</html>
